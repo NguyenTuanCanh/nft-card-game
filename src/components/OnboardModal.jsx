@@ -40,7 +40,7 @@ const OnboardModal = () => {
             </p>
             <CustomButton
               title="Download Core"
-              handleClick={() => window.open('https://core.app/', '_blank')}
+              handleClick={() => window.open('https://metamask.io/download')}
             />
           </>
         );
