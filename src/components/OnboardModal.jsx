@@ -7,7 +7,11 @@ import CustomButton from './CustomButton';
 import { useGlobalContext } from '../context';
 import { GetParams, SwitchNetwork } from './onboard.js';
 
+import { useNavigate } from 'react-router-dom';
+
 const OnboardModal = () => {
+  const navigate = useNavigate();
+
   const [modalIsOpen, setIsOpen] = useState(false);
   const { updateCurrentWalletAddress } = useGlobalContext();
   const [step, setStep] = useState(-1);
@@ -76,7 +80,7 @@ const OnboardModal = () => {
             </p>
             <CustomButton
               title="Faucet some test tokens"
-              handleClick={() => window.location.href = '/faucet'}
+              handleClick={() => navigate('/faucet')}
             />
           </>
         );
