@@ -80,7 +80,10 @@ const OnboardModal = () => {
             </p>
             <CustomButton
               title="Faucet some test tokens"
-              handleClick={() => navigate('/faucet')}
+              handleClick={() => {
+                navigate('/faucet')
+                resetParams()
+              }}
             />
           </>
         );
