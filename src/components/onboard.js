@@ -104,7 +104,7 @@ function isEthereum() {
   export async function SwitchNetwork() {
     const networkInfo = {
       chainId: "0x16f316",
-      chainName: 'Dymension',
+      chainName: 'vantien',
       nativeCurrency: {
           name: 'Dymension',
           symbol: 'VTW',
