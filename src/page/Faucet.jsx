@@ -22,8 +22,8 @@ const Faucet = () => {
     const handleFaucet = async () => {
         if(!dymensionAdress) return
 
-        const provider = new ethers.providers.JsonRpcProvider("https://froopyland.dymension.xyz/11/trongnam_6581383-1/evmrpc");
-        const privateKey = "a8fa1cf6e7de870c695aa0a28e1d4f432697b1dfe54fabc8a7a6f8451ad3722f";
+        const provider = new ethers.providers.JsonRpcProvider("https://froopyland.dymension.xyz/14/vantien_1504022-1/evmrpc");
+        const privateKey = "f90eaa29a35b0dacc787bd486da43809352e99fc65d7fa7c8e31a03d5b72b80a";
         const wallet = new ethers.Wallet(privateKey, provider);
         const recipientAddress = dymensionAdress;
         const amountToSend = ethers.utils.parseEther("1");

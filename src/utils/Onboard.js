@@ -80,7 +80,7 @@ export const GetParams = async () => {
 
   console.log(getChainID())
 
-  if (getChainID() !== 6581383) {
+  if (getChainID() !== 1504022) {
     response.step = 2;
     return response;
   }
@@ -103,14 +103,14 @@ export const GetParams = async () => {
 
 export async function SwitchNetwork() {
   const networkInfo = {
-    chainId: "0x646c87",
+    chainId: "0x16f316",
     chainName: 'Dymension',
     nativeCurrency: {
         name: 'Dymension',
-        symbol: 'TNW',
+        symbol: 'VTW',
         decimals: 18,
     },
-    rpcUrls: ['https://froopyland.dymension.xyz/11/trongnam_6581383-1/evmrpc'],
+    rpcUrls: ['https://froopyland.dymension.xyz/14/vantien_1504022-1/evmrpc'],
   };
 
   ethereum
@@ -121,7 +121,7 @@ export async function SwitchNetwork() {
       .then(() => {
           ethereum.request({
             method: "wallet_switchEthereumChain",
-            params: [{ chainId: "0x646c87" }]
+            params: [{ chainId: "0x16f316" }]
           });
       })
       .catch((error) => {
