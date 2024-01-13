@@ -7,11 +7,7 @@ import CustomButton from './CustomButton';
 import { useGlobalContext } from '../context';
 import { GetParams, SwitchNetwork } from './onboard.js';
 
-import { useNavigate } from 'react-router-dom';
-
 const OnboardModal = () => {
-  const navigate = useNavigate();
-
   const [modalIsOpen, setIsOpen] = useState(false);
   const { updateCurrentWalletAddress } = useGlobalContext();
   const [step, setStep] = useState(-1);
@@ -66,7 +62,7 @@ const OnboardModal = () => {
         return (
           <>
             <p className={styles.modalText}>
-              You're on a different network. Switch to Dymension-Chain.
+              You're on a different network. Switch to Berachain.
             </p>
             <CustomButton title="Switch" handleClick={SwitchNetwork} />
           </>
@@ -76,13 +72,12 @@ const OnboardModal = () => {
         return (
           <>
             <p className={styles.modalText}>
-              Oops, you don't have TNW tokens in your account
+              Oops, you don't have BERA tokens in your account
             </p>
             <CustomButton
               title="Faucet some test tokens"
               handleClick={() => {
-                navigate('/faucet')
-                resetParams()
+                window.location.href = 'https://artio.faucet.berachain.com/';
               }}
             />
           </>

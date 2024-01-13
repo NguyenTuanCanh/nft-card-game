@@ -80,7 +80,7 @@ function isEthereum() {
   
     console.log(getChainID())
   
-    if (getChainID() !== 1504022) {
+    if (getChainID() !== 80085) {
       response.step = 2;
       return response;
     }
@@ -103,14 +103,14 @@ function isEthereum() {
   
   export async function SwitchNetwork() {
     const networkInfo = {
-      chainId: "0x16f316",
-      chainName: 'Dymension',
+      chainId: "0x138d5",
+      chainName: 'Berachain Artio',
       nativeCurrency: {
-          name: 'Dymension',
-          symbol: 'VTW',
+          name: 'Berachain Artio',
+          symbol: 'BERA',
           decimals: 18,
       },
-      rpcUrls: ['https://froopyland.dymension.xyz/14/vantien_1504022-1/evmrpc'],
+      rpcUrls: ['https://artio.rpc.berachain.com/'],
     };
   
     ethereum
@@ -121,7 +121,7 @@ function isEthereum() {
         .then(() => {
             ethereum.request({
               method: "wallet_switchEthereumChain",
-              params: [{ chainId: "0x16f316" }]
+              params: [{ chainId: "0x138d5" }]
             });
         })
         .catch((error) => {
